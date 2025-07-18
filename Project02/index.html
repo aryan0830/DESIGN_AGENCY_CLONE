@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random PassWord Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main" class="w-full h-screen bg-[#00203A] overflow-hidden flex justify-center items-center">
+        <div class="card  w-[23vw] min-h-[26vw] p-3 rounded-[14px] flex flex-col justify-start items-start gap-2 relative z-2">
+            <div class="behind absolute top-0 left-0 w-full h-full bg-[#f8ffff16] rounded-[12px] pointer-events-none  -z-1"></div>
+            <h1 class="text-[1.8rem] leading-[1] text-[#028350] font-semibold"><span class="text-white text-start text-[2rem]">Generate a</span><br>Random Password</h1>
+            <div class="result mt-6 w-full bg-[#fafcfb] flex p-1.5 rounded-[4px]"> 
+                <input type="text" value="Password" class="w-full pointer-events-none text-gray-600 overflow-clip text-nowrap" id="ans"> 
+                <i class="fa-regular fa-copy text-[#028350] self-center ml-auto cursor-pointer"></i> 
+            </div>
+            <div class="level w-full">
+                <input type="range" minlength="0" maxlength="30" value="15" class="w-full text-white cursor-pointer" id="slider">
+            </div>
+            <div class="content mt-3 flex flex-col gap-2">
+                <div class="row flex justify-between items-center gap-35"><label for="" class="uppercase text-[1rem] text-nowrap text-white">Include LowerCase</label><input type="checkbox" class="cursor-pointer scale-[1.2]" id="lw"></div>
+                <div class="row flex justify-between items-center gap-35"><label for="" class="uppercase text-[1rem] text-nowrap text-white">Include UpperCase</label><input type="checkbox" class="cursor-pointer scale-[1.2]" id="up"></div>
+                <div class="row flex justify-between items-center gap-35"><label for="" class="uppercase text-[1rem] text-nowrap text-white">Include Numbers</label><input type="checkbox" class="cursor-pointer scale-[1.2]" id="nm"></div>
+                <div class="row flex justify-between items-center gap-35"><label for="" class="uppercase text-[1rem] text-nowrap text-white">Include Symbols</label><input type="checkbox" class="cursor-pointer scale-[1.2]" id="sym"></div>
+            </div>
+            <button class="bg-[#028350] flex justify-between items-center gap-2 p-2.5 mt-4 cursor-pointer rounded-[4px]">
+                <i class="fa-solid fa-bolt text-white"></i>
+                <h2 class="text-white text-center text-[1rem] shadow-2xl">Generate PassWord</h2>
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="Script.js" module="type"></script>
+</body>
+</html>
